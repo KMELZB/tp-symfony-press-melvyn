@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ category.name }}{% endblock %}
+{% block title %}Catégorie : {{ category.name }}{% endblock %}
 
 {% block body %}
 <main>
-    <h1>Hello {{ category.name }}</h1>
+    <h1>Catégorie : {{ category.name }}</h1>
 
     <section>
         {% for article in articles %}

@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: skyblue;
+    font-family: system-ui, sans-serif;
+    line-height: 1.4;
 }
