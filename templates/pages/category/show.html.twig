@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block body %}
+<main>
+    <h1>Hello {{ category.name }}</h1>
+
+    <section>
+        {% for article in articles %}
+            {% include 'components/_article_card.html.twig' with {'article': article} %}
+        {% endfor %}
+    </section>
+
+    <a href="{{path('app_home')}}">Retourner à l'accueil</a>
+</main>
+{% endblock %}

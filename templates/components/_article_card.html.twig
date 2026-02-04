@@ -1,0 +1,5 @@
+<article>
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content|slice(0, 100) }}...</p>
+    <a href="{{ path('article_show', {'slug': article.slug}) }}">Lire la suite</a>
+</article>
