@@ -6,4 +6,11 @@
     <p>{{ article.content|slice(0, 100) }}...</p>
 
     <a href="{{ path('article_show', {'slug': article.slug}) }}">Lire la suite</a>
+    {% if app.user and article.user == app.user %}
+        <div style="margin-top: 10px;">
+            <a href="{{ path('article_edit', {id: article.id}) }}" style="color: orange;">
+                Modifier mon article
+            </a>
+        </div>
+    {% endif %}
 </article>

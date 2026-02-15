@@ -1,7 +1,13 @@
 <header>
     <nav>
-        <div>
-            <a href="{{ path('app_home') }}">Accueil</a>
-        </div>
-    </nav>
+    <a href="{{ path('app_home') }}">Accueil</a>
+
+    {% if app.user %}
+        <span> | Connecté : {{ app.user.email }}</span>
+        <a href="{{ path('article_new') }}">➕ Nouvel article</a>
+        <a href="{{ path('app_logout') }}">Se déconnecter</a>
+    {% else %}
+        <a href="{{ path('app_login') }}">Se connecter</a>
+    {% endif %}
+</nav>
 </header>
